@@ -3,6 +3,8 @@ const app = express()
 const cors = require('cors');
 const homeRouter = require("./route/HomeRoutes.js")
 const cookie = require('cookie-parser');
+const adminrouter = require('./route/AdminRoutes.js')
+
 // Here are the middleware
 
 app.use(cookie());
@@ -17,5 +19,5 @@ app.use(cors({
 
 app.listen(3000, () => console.log('Server is running on port 3000'))
 
-
+app.use('/admin' , adminrouter)
 app.use('/' , homeRouter);

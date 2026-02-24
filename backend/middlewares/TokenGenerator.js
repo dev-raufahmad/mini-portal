@@ -8,7 +8,7 @@ const TokenGenerator = (prop) => {
         email : prop.email,
         password : prop.password,
         type : prop.type
-    } , "RaufAhmadKhan" , { expiresIn : '10s' })
+    } , "RaufAhmadKhan" , { expiresIn : '1h' })
 
     return token;
 }
